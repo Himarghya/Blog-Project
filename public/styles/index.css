@@ -1,0 +1,73 @@
+html {
+    background: #D3D3D3;
+}
+
+.Main-Container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0px 2px 15px black;
+    padding: 15px;
+    background-color: aliceblue;
+}
+
+#NewPostBtn {
+    width: fit-content;
+    height: 20px;
+    padding: 8px;
+    background-color: #74C365;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: black;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+#text {
+    text-align: justify;
+}
+
+#edit {
+    background-color: #0f52ba;
+    border: none;
+    padding: 8px;
+    margin-right: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#delete {
+    background-color: red;
+    border: none;
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #D3D3D3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: inset 10px 10px 20px grey, inset -10px -5px 20px grey;
+}
+.ContactIcons>#Instagram{
+   margin-right: 40px;
+}
+.ContactIcons>#Linkedin{
+    margin-right: 40px;
+}
+.ContactIcons>#Github{
+    text-decoration: none;
+}
