@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 📗Blog 📖</title>
+    <style>
+        html {
+            background: #D3D3D3;
+        }
+
+        .Main-Container {
+            display: flex;
+            flex-direction: row;
+            height: fit-content;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .Container {
+            margin-top: 40px;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            padding-left: 20px;
+            padding-right: 40px;
+            box-shadow: 10px 10px 20px black;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .NewPost {
+            font-size: 2.5rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0;
+            text-align: justify;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 0.9rem;
+            font-family: cursive;
+            overflow: auto;
+            white-space: normal;
+        }
+
+        #Tittle {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        #Context {
+            height: 150px;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            font-family: cursive;
+        }
+
+        #Author {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            height: 40px;
+            width: 100%;
+            background-color: #0f52b8;
+            color: white;
+            font-size: 1.2em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Main-Container">
+        <div class="Container">
+            <h1 class="NewPost">Edit Post</h1>
+            <form action="/Submit/Edit/<%= locals.Data.id %>" method="post">
+                <label for="Tittle"></label>
+                <input type="text" id="Tittle" name="Tittle" placeholder="Tittle" value="<%= locals.Data.Tittle %>">
+                <label for="Context"> </label>
+                <textarea id="Context" name="Context" placeholder="Context"><%= locals.Data.BlogText  %></textarea>
+                <label for="Author"> </label>
+                <input type="text" id="Author" name="Author" placeholder="Author" value="<%= locals.Data.Author  %>">
+                <button type="submit"> Edit Post</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

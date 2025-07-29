@@ -11,7 +11,16 @@
 <body>
     <div class="Main-Container">
         <div class="Container">
-
+            <h1 class="NewPost">New Post</h1>
+            <form action="/Submit"  method="post">
+                <label for="Tittle"> </label>
+                <input type="text" id="Tittle" name="Tittle" placeholder="Tittle">
+                <label for="Context"> </label>
+                <textarea id="Context" name="Context" placeholder="Context"></textarea>
+                <label for="Author"> </label>
+                <input type="text" id="Author" name="Author" placeholder="Author">
+                <button type="submit" > Submit</button>
+            </form>
         </div>
     </div>
 </body>

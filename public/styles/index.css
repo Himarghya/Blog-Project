@@ -12,7 +12,7 @@ html {
     transform: translate(-50%);
     box-shadow: 0px 2px 15px black;
     padding: 15px;
-    background-color: aliceblue;
+    background-color: #f4f0e8;
 }
 
 #NewPostBtn {
@@ -40,6 +40,8 @@ html {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 8px;
 }
 
 #delete {
@@ -49,6 +51,8 @@ html {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 8px;
 }
 footer{
     display: flex;
@@ -56,11 +60,11 @@ footer{
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #23262a;
     color: #D3D3D3;
     padding-top: 20px;
     padding-bottom: 20px;
-    box-shadow: inset 10px 10px 20px grey, inset -10px -5px 20px grey;
+    box-shadow: inset 5px 5px 10px grey, inset -5px -5px 10px grey;
 }
 .ContactIcons>#Instagram{
    margin-right: 40px;
@@ -70,4 +74,62 @@ footer{
 }
 .ContactIcons>#Github{
     text-decoration: none;
+}
+/* Tooltip container */
+.instagram, .Linkedin, .Github {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.instagram .instagramtext, .Linkedin .LinkedinText, .Github .GithubText {
+  visibility: hidden;
+  width: 120px;
+  background: linear-gradient(to left bottom, #F58529 , #FEDA77, #DD2A7B, #8134AF, #515BD4);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top:-30px;
+  right:-40px;
+}
+ .Linkedin .LinkedinText {
+  visibility: hidden;
+  width: 120px;
+  background: linear-gradient(to left bottom, #0f52ba);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top:-30px;
+  right:-40px;
+}
+ .Github .GithubText {
+  visibility: hidden;
+  width: 120px;
+  background: linear-gradient(to left bottom,gray, #232325);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top:-30px;
+  right:-40px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.instagram:hover .instagramtext, .Linkedin:hover .LinkedinText, .Github:hover .GithubText{
+  visibility: visible;
 }
